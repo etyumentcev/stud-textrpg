@@ -6,8 +6,10 @@ class Place
 {
 	int placeID;
 	int typeEnemy; // Тип противника на этом месте
-	std::tuple<int, int> nextPlaces; // placeID двух мест для перехода из текущего места
-	std::vector<std::string> strings; // текстовые строки для этого места
+	std::tuple<int, int> nextPlaces_; // placeID двух мест для перехода из текущего места
+	std::vector<std::string> strings_; // текстовые строки для этого места
+
+
 public:
 	Place();
 };
@@ -20,5 +22,6 @@ public:
 	void addPlace(int, std::tuple<int, int>);
 	void removePlace();
 	void editPlace(int, int, std::tuple<int, int>);
-	Place getPlace(int);
+	Place& getPlace(int);
+	Place& operator[] (int x);
 };
