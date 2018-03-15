@@ -1,5 +1,4 @@
-#pragma once
-#ifndef Main
-#define Main
+#ifndef MAIN_H
+#define MAIN_H
 #include <iostream>
-#endif
+#endif MAIN_H

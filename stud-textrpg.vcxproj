@@ -115,10 +115,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="EnemyHero.cpp" />
+    <ClCompile Include="EnemyHeroNovice.cpp" />
+    <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="HeroPlayer.cpp" />
+    <ClCompile Include="Items.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="MapGameField.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="EnemyHero.h" />
+    <ClInclude Include="EnemyHeroNovice.h" />
+    <ClInclude Include="GameObject.h" />
+    <ClInclude Include="HeroPlayer.h" />
+    <ClInclude Include="Items.h" />
     <ClInclude Include="Main.h" />
+    <ClInclude Include="MapGameField.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
