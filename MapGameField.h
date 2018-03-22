@@ -1,6 +1,7 @@
 ﻿#pragma once
 #include <tuple>
 #include <vector>
+#include <map>
 
 class Place
 {
@@ -24,4 +25,5 @@ public:
 	void editPlace(int, int, std::tuple<int, int>);
 	Place& getPlace(int);
 	Place& operator[] (int x);
+	std::map<int, double> map;
 };

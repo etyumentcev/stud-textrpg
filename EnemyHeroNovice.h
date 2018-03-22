@@ -4,7 +4,7 @@ class EnemyHeroNovice :
 	public EnemyHero
 {
 public:
-	EnemyHeroNovice(int, int, int);
+	using EnemyHero::EnemyHero;
 	virtual ~EnemyHeroNovice();
 	void makeAttack() override;
 	void makeMagicAttack(int) override;
