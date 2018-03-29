@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -41,7 +41,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
@@ -120,15 +120,17 @@
     <ClCompile Include="Element.cpp" />
     <ClCompile Include="EnemyHero.cpp" />
     <ClCompile Include="EnemyHeroNovice.cpp" />
-    <ClCompile Include="GameField.cpp" />
     <ClCompile Include="GameObject.cpp" />
-    <ClCompile Include="GFImpl.cpp" />
+    <ClCompile Include="Input.cpp" />
+    <ClCompile Include="LoadSave.cpp" />
+    <ClCompile Include="SettingsStore.cpp" />
+    <ClCompile Include="View.cpp" />
+    <ClCompile Include="ViewImpl.cpp" />
     <ClCompile Include="HeroPlayer.cpp" />
     <ClCompile Include="HUD.cpp" />
     <ClCompile Include="Items.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="MapGameField.cpp" />
-    <ClCompile Include="View.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Content.h" />
@@ -136,15 +138,20 @@
     <ClInclude Include="Element.h" />
     <ClInclude Include="EnemyHero.h" />
     <ClInclude Include="EnemyHeroNovice.h" />
-    <ClInclude Include="GameField.h" />
     <ClInclude Include="GameObject.h" />
-    <ClInclude Include="GFImpl.h" />
+    <ClInclude Include="Input.h" />
+    <ClInclude Include="LoadSave.h" />
+    <ClInclude Include="SettingsStore.h" />
+    <ClInclude Include="ViewImpl.h" />
     <ClInclude Include="HeroPlayer.h" />
     <ClInclude Include="HUD.h" />
     <ClInclude Include="Items.h" />
     <ClInclude Include="Main.h" />
     <ClInclude Include="MapGameField.h" />
     <ClInclude Include="View.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

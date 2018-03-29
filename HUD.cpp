@@ -11,7 +11,7 @@ HUD::~HUD()
 {
 }
 
-void HUD::Draw(Element el)
+void HUD::Draw(Element &el)
 {
 	el.Draw();
 }
