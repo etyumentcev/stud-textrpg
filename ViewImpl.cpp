@@ -13,7 +13,7 @@ ViewImpl::~ViewImpl()
 
 void ViewImpl::Draw(HUD hud, Content content)
 {
-
-	hud.Draw(hud); // элементы интерфейса
-	content.Draw(content); // содержание (текст)
+	Element* mock = new Element();
+	hud.Draw(mock); // элементы интерфейса
+	content.Draw(); // содержание (текст)
 }
