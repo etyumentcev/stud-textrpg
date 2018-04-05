@@ -11,7 +11,7 @@ Content::~Content()
 {
 }
 
-void Content::Draw()
+void Content::DrawText()
 {
 	std::cout << "";
 }
