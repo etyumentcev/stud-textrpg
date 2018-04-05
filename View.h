@@ -8,4 +8,4 @@ public:
 	~View();
 	virtual void Draw() = 0;
 };
-#endif /VIEW_H
+#endif VIEW_H

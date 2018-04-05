@@ -123,6 +123,7 @@
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="LoadSave.cpp" />
+    <ClCompile Include="Place.cpp" />
     <ClCompile Include="SettingsStore.cpp" />
     <ClCompile Include="View.cpp" />
     <ClCompile Include="ViewImpl.cpp" />
@@ -141,6 +142,7 @@
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="Input.h" />
     <ClInclude Include="LoadSave.h" />
+    <ClInclude Include="Place.h" />
     <ClInclude Include="SettingsStore.h" />
     <ClInclude Include="ViewImpl.h" />
     <ClInclude Include="HeroPlayer.h" />

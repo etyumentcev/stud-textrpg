@@ -1,4 +1,6 @@
-#pragma once
+#ifndef EnemyHeroNovice_H
+#define EnemyHeroNovice_H
+
 #include "EnemyHero.h"
 class EnemyHeroNovice :
 	public EnemyHero
@@ -9,4 +11,4 @@ public:
 	void makeAttack() override;
 	void makeMagicAttack(int) override;
 };
-
+#endif EnemyHeroNovice_H

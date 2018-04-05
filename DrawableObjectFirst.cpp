@@ -52,7 +52,7 @@ unsigned char sprite_t3[9][9] = { { 32, 32, 32, 32, 32, 32, 32, 32, 10 },
 { 32, 196 ,196, 196, 196, 196, 196, 32, 10 },
 { 32, 32, 32, 32, 32, 32, 32, 32, 10 } };
 
-void DrawIcon_(unsigned char(&array)[9][9], short ofs_x, short ofs_y)
+void DrawableObjectFirst::DrawIcon_(unsigned char(&array)[9][9], short ofs_x, short ofs_y)
 {
 	using namespace std;
 	COORD coord;
@@ -69,7 +69,13 @@ void DrawIcon_(unsigned char(&array)[9][9], short ofs_x, short ofs_y)
 		}
 	}
 }
-void Clear_console() {
+
+void DrawableObjectFirst::DrawTextInfo_(std::string msg)
+{
+	std::cout << msg;
+}
+
+void DrawableObjectFirst::Clear_console() {
 	COORD topLeft = { 0, 0 };
 	HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE);
 	CONSOLE_SCREEN_BUFFER_INFO screen;
@@ -85,20 +91,16 @@ void Clear_console() {
 	);
 	SetConsoleCursorPosition(console, topLeft);
 }
-DrawableObjectFirst::DrawableObjectFirst()
-{
-}
 
 
-DrawableObjectFirst::~DrawableObjectFirst()
-{
-}
 
 void DrawableObjectFirst::Draw()
 {
 	//todo здесь получение состояние объекта и вывод на экран
 	//for tests
 	DrawIcon_(sprite_h, 10, 0);
+	DrawTextInfo_("Health: ");
 	DrawIcon_(sprite_m, 10, 5);
+	DrawTextInfo_("Mana: ");
 	DrawIcon_(sprite_t1, 10, 10);
 }

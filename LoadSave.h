@@ -1,4 +1,6 @@
-#pragma once
+#ifndef LoadSave_H
+#define LoadSave_H
+
 class LoadSave
 {
 public:
@@ -6,3 +8,4 @@ public:
 	~LoadSave();
 };
 
+#endif LoadSave_H

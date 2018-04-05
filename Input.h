@@ -1,4 +1,6 @@
-#pragma once
+#ifndef Input_H
+#define Input_H
+
 class Input
 {
 public:
@@ -6,3 +8,4 @@ public:
 	~Input();
 };
 
+#endif Input_H

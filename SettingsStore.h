@@ -1,4 +1,6 @@
-#pragma once
+#ifndef SettingsStore_H
+#define SettingsStore_H
+
 class SettingsStore //todo классы игры игрока противника будут вызывать методы настроек?
 {
 public:
@@ -17,3 +19,5 @@ class SettingsEnemy : SettingsStore{
 class SettingsGame : SettingsStore{
 
 };
+
+#endif SettingsStore_H

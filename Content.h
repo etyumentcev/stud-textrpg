@@ -1,4 +1,6 @@
-#pragma once
+#ifndef Content_H
+#define Content_H
+
 class Content
 {
 public:
@@ -7,3 +9,4 @@ public:
 	void DrawText();
 };
 
+#endif Content_H
