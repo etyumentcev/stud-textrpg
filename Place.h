@@ -11,7 +11,7 @@ public:
 	Place();
 };
 
-inline Place::Place()
+ Place::Place()
 {
 
 }
