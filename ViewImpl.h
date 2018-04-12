@@ -9,8 +9,7 @@
 class ViewImpl : public View
 {
 public:
-	ViewImpl();
-	virtual ~ViewImpl();
+	virtual ~ViewImpl() = default;
 	void Draw(HUD hud, Content content);
 };
 

@@ -10,4 +10,9 @@ class Place
 public:
 	Place();
 };
+
+inline Place::Place()
+{
+
+}
 #endif Place_H

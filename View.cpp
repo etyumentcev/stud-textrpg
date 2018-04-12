@@ -1,10 +1,6 @@
 #include "View.h"
 
-View::View()
+View::View(int state)
 {
-}
-
-
-View::~View()
-{
+	;
 }

@@ -1,11 +1,11 @@
 #ifndef Element_H
 #define Element_H
-
-class Element
+#include "View.h"
+class Element : public View
 {
 public:
-	Element();
-	virtual ~Element();
+	Element() = default;
+	virtual ~Element() = default;
 	virtual void Draw() = 0; //todo реализация в DrawableObject...
 };
 
