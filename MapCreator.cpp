@@ -14,5 +14,7 @@ MapGameField& MapCreator::getMap()
 	place0_text.push_back("Вы проиграли!");
 
 	mgf->addPlace(0, 0, "Start !", { 1,2 }, place0_text);
+
+	return *mgf;
 }
 

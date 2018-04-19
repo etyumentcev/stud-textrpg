@@ -4,14 +4,21 @@
 using namespace std;
 
 
-void MapGameField::addPlace(int placeID, int typeEnemy, std::string namaOfPlace, std::tuple<int, int> nextPlaces, std::vector<std::string> strings)
+void MapGameField::addPlace(int placeID, int typeEnemy, string namaOfPlace, tuple<int, int> nextPlaces, vector<string> strings)
 {
-	unique_ptr<Place> place(new Place(placeID, typeEnemy, namaOfPlace, nextPlaces));
+	unique_ptr<Place> place(new Place(placeID, typeEnemy, namaOfPlace, strings, nextPlaces));
+	map.insert(std::make_pair(placeID, *place));
 }
 
-void MapGameField::editPlace(int, int, std::string, std::tuple<int, int>, std::vector<std::string>)
+void MapGameField::removePlace(int el)
 {
+	map.erase(el);
+}
 
+void MapGameField::editPlace(int placeID, int typeEnemy, std::string name, std::tuple<int, int> nextPlaces, std::vector<std::string> strings)
+{
+	auto place = getPlace(placeID);
+	place.setPlace(placeID, typeEnemy, name, nextPlaces, strings);
 }
 
 Place& MapGameField::getPlace(int id)
@@ -21,8 +28,8 @@ Place& MapGameField::getPlace(int id)
 
 void MapGameField::nextPlace(int hand_side)
 {
-	int left = get<0>(this->place.getnextPlaces());
-	int right = get<1>(this->place.getnextPlaces());
+	const int left = get<0>(this->place.getnextPlaces());
+	const int right = get<1>(this->place.getnextPlaces());
 	if (hand_side == left)
 	{
 		place = getPlace(left);

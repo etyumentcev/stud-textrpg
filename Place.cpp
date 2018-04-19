@@ -29,10 +29,11 @@ int Place::getTypeEnemy()
 	return typeEnemy;
 }
 
-void Place::setPlace(int placeID, int TypeEnemy, std::string name, std::vector<std::string> strings)
+void Place::setPlace(int placeID, int TypeEnemy, std::string name, std::tuple<int, int> nextPlaces, std::vector<std::string> strings)
 {
 	this->placeID = placeID;
 	this->typeEnemy = TypeEnemy;
 	this->NameofPlace = name;
+	this->nextPlaces_ = nextPlaces;
 	this->strings_ = strings;
 }

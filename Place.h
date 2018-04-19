@@ -19,7 +19,7 @@ public:
 	std::string GetNextPhrase();
 	int getPlaceID();
 	int getTypeEnemy();
-	void setPlace(int placeID, int TypeEnemy, std::string name, std::vector<std::string> strings);
+	void setPlace(int placeID, int TypeEnemy, std::string name, std::tuple<int, int> nextPlaces, std::vector<std::string> strings);
 };
 
 #endif Place_H
