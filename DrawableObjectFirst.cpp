@@ -61,12 +61,17 @@ void DrawableObjectFirst::DrawIcon_(unsigned char(&array)[9][9], short ofs_x, sh
 	coord.Y = ofs_y;
 	SetConsoleCursorPosition(oh, coord);
 
+	int i = ofs_y;
+
 	for (auto& rows : array)
 	{
 		for (auto& el : rows)
 		{
 			cout << el;
 		}
+		coord.X = ofs_x;
+		coord.Y = ++i;
+		SetConsoleCursorPosition(oh, coord);
 	}
 }
 
