@@ -12,3 +12,4 @@ void ViewImpl::Draw(HUD hud, Content content)
 	//hud.Draw(*t);
  	//content.DrawText();
 }
+
