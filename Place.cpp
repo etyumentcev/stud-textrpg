@@ -2,8 +2,8 @@
 #include <string>
 using namespace std;
 
-Place::Place(int placeID, int typeEnemy, string nameOfPlace, vector<string> strings)
-	: placeID(placeID), typeEnemy(typeEnemy), NameofPlace(nameOfPlace), strings_(strings), it(strings_.begin()), end(strings_.end()){};
+Place::Place(int placeID, int typeEnemy, string nameOfPlace, vector<string> strings, std::tuple<int, int> nextPlaces)
+	: placeID(placeID), typeEnemy(typeEnemy), NameofPlace(nameOfPlace), strings_(strings), nextPlaces_(nextPlaces), it(strings_.begin()), end(strings_.end()){};
 
 std::tuple<int, int> Place::getnextPlaces()
 {

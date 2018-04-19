@@ -4,10 +4,9 @@
 using namespace std;
 
 
-void MapGameField::addPlace(int, int, std::string, std::tuple<int, int>, std::vector<std::string>)
+void MapGameField::addPlace(int placeID, int typeEnemy, std::string namaOfPlace, std::tuple<int, int> nextPlaces, std::vector<std::string> strings)
 {
-	unique_ptr<Place> place(new Place);
-
+	unique_ptr<Place> place(new Place(placeID, typeEnemy, namaOfPlace, nextPlaces));
 }
 
 void MapGameField::editPlace(int, int, std::string, std::tuple<int, int>, std::vector<std::string>)

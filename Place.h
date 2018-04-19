@@ -14,7 +14,7 @@ class Place
 	std::vector<std::string>::iterator end;
 	std::tuple<int, int> nextPlaces_;
 public:
-	Place(int, int, std::string, std::vector<std::string>);
+	Place(int, int, std::string, std::vector<std::string>, std::tuple<int, int> nextPlaces_);
 	std::tuple<int, int> getnextPlaces();
 	std::string GetNextPhrase();
 	int getPlaceID();
