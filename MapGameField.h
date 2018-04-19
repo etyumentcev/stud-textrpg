@@ -9,14 +9,16 @@
 class MapGameField //todo сделать контейнер для карты и заполнение карты
 {
 	Place place;
+	int current_place;
+	std::map<int, Place> map;
 public:
 	MapGameField();
-	void addPlace(int, std::tuple<int, int>);
-	void removePlace();
-	void editPlace(int, int, std::tuple<int, int>);
+	void addPlace(int, int, std::string,  std::tuple<int, int>, std::vector<std::string>);
+	void removePlace(int);
+	void editPlace(int, int, std::string, std::tuple<int, int>, std::vector<std::string>);
 	Place& getPlace(int);
+	void nextPlace(int);
 	Place& operator[] (int x);
-	std::map<int, double> map;
 };
 
 #endif MapGameField_H

@@ -141,7 +141,7 @@
       <Filter>Header Files\Game</Filter>
     </ClInclude>
     <ClInclude Include="MapCreator.h">
-      <Filter>Source Files\Game</Filter>
+      <Filter>Header Files\Game</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

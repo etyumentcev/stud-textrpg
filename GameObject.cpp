@@ -23,6 +23,6 @@ void GameObject::GameView(View &view)
 
 MapGameField& GameObject::CreateMap()
 {
-	std::shared_ptr<MapCreator> mapCreator(new MapCreator);
+	std::unique_ptr<MapCreator> mapCreator(new MapCreator);
 	return mapCreator->getMap();
 }
