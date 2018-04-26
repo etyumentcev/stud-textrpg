@@ -125,6 +125,7 @@
     <ClCompile Include="LoadSave.cpp" />
     <ClCompile Include="MapCreator.cpp" />
     <ClCompile Include="Place.cpp" />
+    <ClCompile Include="Run.cpp" />
     <ClCompile Include="SettingsStore.cpp" />
     <ClCompile Include="View.cpp" />
     <ClCompile Include="ViewImpl.cpp" />
@@ -145,6 +146,7 @@
     <ClInclude Include="LoadSave.h" />
     <ClInclude Include="MapCreator.h" />
     <ClInclude Include="Place.h" />
+    <ClInclude Include="Run.h" />
     <ClInclude Include="SettingsStore.h" />
     <ClInclude Include="ViewImpl.h" />
     <ClInclude Include="HeroPlayer.h" />

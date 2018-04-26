@@ -1,10 +1,8 @@
-#include "Main.h"
-#include "GameObject.h"
+#include "Run.h"
+
 int main(int argc, char* argv[])
 {
-	//todo «агрузка настроек, установка состо€ний
-	auto go = new GameObject;
-	auto gameMap = go->CreateMap();
-	auto view = new View(0);
-	go->GameView(*view);
+	Run run;
+	run.run();
+	return 0;
 }
