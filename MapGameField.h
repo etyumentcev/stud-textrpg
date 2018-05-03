@@ -6,7 +6,7 @@
 #include <map>
 #include "Place.h"
 
-class MapGameField //todo сделать контейнер для карты и заполнение карты
+class MapGameField
 {
 	Place place;
 	int current_place;
