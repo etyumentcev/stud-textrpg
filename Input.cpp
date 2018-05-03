@@ -3,6 +3,12 @@
 int Input::PressedKey()
 {
 	int lastKeyCode;
+	/*
+	27 esc
+	13 enter
+	32 space
+	8 backspc
+	*/
 	int countdown = 0;
 	char b;
 	while (countdown++ <= 1000) {
@@ -13,7 +19,7 @@ int Input::PressedKey()
 	if (b != 0)
 	{
 		printf("The key was %d\n", _getch());
-		lastKeyCode = reinterpret_cast<int>(_getch);
+		lastKeyCode = _getch();
 	}
 	return lastKeyCode;
 }
@@ -33,7 +39,7 @@ void Input::PressedKeyTest()
 			if (b != 0)
 			{
 				printf("The key was %d\n", _getch());
-				lastKeyCode = reinterpret_cast<int>(_getch);
+				lastKeyCode = _getch();
 			}
 		}
 	}

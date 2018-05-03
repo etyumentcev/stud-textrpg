@@ -12,5 +12,5 @@ public:
 	~Input() = default;
 	int PressedKey();
 	void PressedKeyTest();
-}
+};
 #endif Input_H
