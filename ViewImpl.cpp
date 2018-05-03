@@ -9,7 +9,5 @@ void ViewImpl::Draw(HUD hud, Content content)
 {
 	Element* t = new DrawableObjectFirst();
 	t->Draw();
-	//hud.Draw(*t);
- 	//content.DrawText();
 }
 

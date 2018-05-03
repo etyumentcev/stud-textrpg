@@ -6,6 +6,7 @@ MapGameField& MapCreator::getMap()
 {
 	using namespace std;
 	unique_ptr<MapGameField> mgf(new MapGameField);
+
 	vector<string> place0_text;
 	place0_text.push_back("Игра начинается");
 	place0_text.push_back("Вам предстоит сразится с первым монстром");

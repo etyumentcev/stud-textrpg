@@ -8,13 +8,6 @@
 
 void GameObject::GameView(View &view)
 {
-	//HUD* hud = new HUD;
-	//Element* el = new Element;
-	//hud->Draw(*el);
-
-	//std::shared_ptr<ViewImpl> vi(new ViewImpl);
-	//std::shared_ptr<Content> mock1(new Content);
-	//std::shared_ptr<HUD> mock2(new HUD);
 	auto vi = std::make_unique<ViewImpl>();
 	auto mock1 = std::make_unique<Content>();
 	auto mock2 = std::make_unique<HUD>();
