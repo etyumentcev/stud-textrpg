@@ -3,7 +3,7 @@
 using namespace std;
 
 Place::Place(int placeID, int typeEnemy, string nameOfPlace, vector<string> strings, std::tuple<int, int> nextPlaces)
-	: placeID(placeID), typeEnemy(typeEnemy), NameofPlace(nameOfPlace), strings_(strings), nextPlaces_(nextPlaces), it(strings_.begin()), end(strings_.end()){};
+	: placeID(placeID), typeEnemy(typeEnemy), NameofPlace(nameOfPlace), strings_(strings), it(strings_.begin()), end(strings_.end()), nextPlaces_(nextPlaces){}
 
 std::tuple<int, int> Place::getnextPlaces()
 {

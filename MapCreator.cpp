@@ -30,11 +30,11 @@ MapGameField& MapCreator::getMap()
 	place5_text.push_back("Это последнее место");
 
 	mgf->addPlace(0, 0, "Start !", { 1,2 }, place0_text);
-	mgf->addPlace(0, 0, "Start !", { 4,2 }, place1_text);
-	mgf->addPlace(0, 0, "Start !", { 1,3 }, place2_text);
-	mgf->addPlace(0, 0, "Start !", { 4,5 }, place3_text);
-	mgf->addPlace(0, 0, "Start !", { 3,5 }, place4_text);
-	mgf->addPlace(0, 0, "Start !", { 4,5 }, place5_text);
+	mgf->addPlace(1, 0, "Поляна", { 4,2 }, place1_text);
+	mgf->addPlace(2, 0, "Лес", { 1,3 }, place2_text);
+	mgf->addPlace(3, 0, "Замок", { 4,5 }, place3_text);
+	mgf->addPlace(4, 0, "Побережье", { 3,5 }, place4_text);
+	mgf->addPlace(5, 0, "Finish !", { 4,5 }, place5_text);
 
 	return *mgf;
 }

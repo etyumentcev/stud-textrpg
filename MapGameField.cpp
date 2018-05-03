@@ -4,9 +4,9 @@
 using namespace std;
 
 
-void MapGameField::addPlace(int placeID, int typeEnemy, string namaOfPlace, tuple<int, int> nextPlaces, vector<string> strings)
+void MapGameField::addPlace(int placeID, int typeEnemy, string nameOfPlace, tuple<int, int> nextPlaces, vector<string> strings)
 {
-	unique_ptr<Place> place(new Place(placeID, typeEnemy, namaOfPlace, strings, nextPlaces));
+	unique_ptr<Place> place(new Place(placeID, typeEnemy, nameOfPlace, strings, nextPlaces));
 	map.insert(std::make_pair(placeID, *place));
 }
 
