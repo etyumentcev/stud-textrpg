@@ -15,6 +15,7 @@ class Place
 	std::tuple<int, int> nextPlaces_;
 public:
 	Place(int placeID, int typeEnemy, std::string nameOfPlace, std::vector<std::string> strings, std::tuple<int, int> nextPlaces_);
+	//Place();
 	std::tuple<int, int> getnextPlaces();
 	std::string GetNextPhrase();
 	int getPlaceID();

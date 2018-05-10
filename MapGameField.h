@@ -8,9 +8,10 @@
 
 class MapGameField
 {
-	Place place;
+	Place* place;
 	int current_place;
-	std::map<int, Place> map;
+	//std::map<int, Place*> map;
+	std::map < int, unique_ptr < Place >> map;
 public:
 	MapGameField();
 	void addPlace(int, int, std::string,  std::tuple<int, int>, std::vector<std::string>);
