@@ -11,7 +11,7 @@ public:
 	virtual void Set(vector<int>) = 0;
 };
 
-class SettingsPlayer : SettingsStore{
+class SettingsPlayer : public SettingsStore{
 	int Health;
 	int Manna;
 public:
@@ -19,14 +19,14 @@ public:
 	vector<int> Get() override;
 };
 
-class SettingsEnemy : SettingsStore{
+class SettingsEnemy : public SettingsStore{
 	int Health;
 public:
 	void Set(vector<int>) override;
 	vector<int> Get() override;
 };
 
-class SettingsGame : SettingsStore{
+class SettingsGame : public  SettingsStore{
 	int currentPlaceOnMap;
 	int currentTextStringShow;
 public:

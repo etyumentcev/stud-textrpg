@@ -127,6 +127,7 @@
     <ClCompile Include="Place.cpp" />
     <ClCompile Include="Run.cpp" />
     <ClCompile Include="SettingsStore.cpp" />
+    <ClCompile Include="State.cpp" />
     <ClCompile Include="View.cpp" />
     <ClCompile Include="ViewImpl.cpp" />
     <ClCompile Include="HeroPlayer.cpp" />
@@ -148,6 +149,7 @@
     <ClInclude Include="Place.h" />
     <ClInclude Include="Run.h" />
     <ClInclude Include="SettingsStore.h" />
+    <ClInclude Include="State.h" />
     <ClInclude Include="ViewImpl.h" />
     <ClInclude Include="HeroPlayer.h" />
     <ClInclude Include="HUD.h" />
