@@ -34,46 +34,19 @@
     <Filter Include="Header Files\Game\Heroes">
       <UniqueIdentifier>{e0c0c7cd-fc81-494a-ba36-e14039c64c47}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Game\heroes">
+      <UniqueIdentifier>{95c8ae99-6aeb-4846-940c-dacd7f503a7e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="HUD.cpp">
-      <Filter>Source Files\View</Filter>
-    </ClCompile>
-    <ClCompile Include="Content.cpp">
-      <Filter>Source Files\View</Filter>
-    </ClCompile>
-    <ClCompile Include="Element.cpp">
-      <Filter>Source Files\View</Filter>
-    </ClCompile>
-    <ClCompile Include="DrawableObjectFirst.cpp">
-      <Filter>Source Files\View</Filter>
-    </ClCompile>
-    <ClCompile Include="ViewImpl.cpp">
-      <Filter>Source Files\View</Filter>
-    </ClCompile>
     <ClCompile Include="View.cpp">
       <Filter>Source Files\View</Filter>
-    </ClCompile>
-    <ClCompile Include="EnemyHero.cpp">
-      <Filter>Source Files\Game</Filter>
-    </ClCompile>
-    <ClCompile Include="GameObject.cpp">
-      <Filter>Source Files\Game</Filter>
-    </ClCompile>
-    <ClCompile Include="HeroPlayer.cpp">
-      <Filter>Source Files\Game</Filter>
     </ClCompile>
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="MapGameField.cpp">
       <Filter>Source Files\Game</Filter>
-    </ClCompile>
-    <ClCompile Include="Items.cpp">
-      <Filter>Source Files\Game</Filter>
-    </ClCompile>
-    <ClCompile Include="Input.cpp">
-      <Filter>Source Files\InputSave</Filter>
     </ClCompile>
     <ClCompile Include="LoadSave.cpp">
       <Filter>Source Files\InputSave</Filter>
@@ -90,10 +63,22 @@
     <ClCompile Include="Run.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="State.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="InterchangeObject.cpp">
+      <Filter>Source Files\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="DrawableObjectHUD.cpp">
+      <Filter>Source Files\View</Filter>
+    </ClCompile>
+    <ClCompile Include="Control.cpp">
+      <Filter>Source Files\InputSave</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyHero.cpp">
+      <Filter>Source Files\Game\heroes</Filter>
+    </ClCompile>
+    <ClCompile Include="HeroPlayer.cpp">
+      <Filter>Source Files\Game\heroes</Filter>
+    </ClCompile>
+    <ClCompile Include="State.cpp">
       <Filter>Source Files\Game</Filter>
     </ClCompile>
   </ItemGroup>
@@ -104,32 +89,8 @@
     <ClInclude Include="View.h">
       <Filter>Header Files\View</Filter>
     </ClInclude>
-    <ClInclude Include="Content.h">
-      <Filter>Header Files\View</Filter>
-    </ClInclude>
-    <ClInclude Include="HUD.h">
-      <Filter>Header Files\View</Filter>
-    </ClInclude>
-    <ClInclude Include="Element.h">
-      <Filter>Header Files\View</Filter>
-    </ClInclude>
-    <ClInclude Include="DrawableObjectFirst.h">
-      <Filter>Header Files\View</Filter>
-    </ClInclude>
-    <ClInclude Include="ViewImpl.h">
-      <Filter>Header Files\View</Filter>
-    </ClInclude>
-    <ClInclude Include="GameObject.h">
-      <Filter>Header Files\Game</Filter>
-    </ClInclude>
-    <ClInclude Include="Items.h">
-      <Filter>Header Files\Game</Filter>
-    </ClInclude>
     <ClInclude Include="MapGameField.h">
       <Filter>Header Files\Game</Filter>
-    </ClInclude>
-    <ClInclude Include="Input.h">
-      <Filter>Header Files\InputSave</Filter>
     </ClInclude>
     <ClInclude Include="LoadSave.h">
       <Filter>Header Files\InputSave</Filter>
@@ -146,9 +107,6 @@
     <ClInclude Include="Run.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="State.h">
-      <Filter>Header Files\Game</Filter>
-    </ClInclude>
     <ClInclude Include="InterchangeObject.h">
       <Filter>Header Files\Game</Filter>
     </ClInclude>
@@ -157,6 +115,15 @@
     </ClInclude>
     <ClInclude Include="HeroPlayer.h">
       <Filter>Header Files\Game\Heroes</Filter>
+    </ClInclude>
+    <ClInclude Include="DrawableObjectHUD.h">
+      <Filter>Header Files\View</Filter>
+    </ClInclude>
+    <ClInclude Include="Control.h">
+      <Filter>Header Files\InputSave</Filter>
+    </ClInclude>
+    <ClInclude Include="State.h">
+      <Filter>Header Files\Game</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

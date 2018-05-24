@@ -1,12 +1,13 @@
 #ifndef VIEW_H
 #define VIEW_H
 
-class View //todo Отображение игрового поля
+#include "State.h";
+
+class View
 {
 public:
 	View() = default;
-	View(int state);
 	virtual  ~View() = default;
-	//virtual void Draw() = 0;
+	virtual void Draw(State&) = 0;
 };
 #endif VIEW_H

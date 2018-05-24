@@ -115,12 +115,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Content.cpp" />
-    <ClCompile Include="DrawableObjectFirst.cpp" />
-    <ClCompile Include="Element.cpp" />
+    <ClCompile Include="DrawableObjectHUD.cpp" />
     <ClCompile Include="EnemyHero.cpp" />
-    <ClCompile Include="GameObject.cpp" />
-    <ClCompile Include="Input.cpp" />
+    <ClCompile Include="Control.cpp" />
     <ClCompile Include="InterchangeObject.cpp" />
     <ClCompile Include="LoadSave.cpp" />
     <ClCompile Include="MapCreator.cpp" />
@@ -129,33 +126,24 @@
     <ClCompile Include="SettingsStore.cpp" />
     <ClCompile Include="State.cpp" />
     <ClCompile Include="View.cpp" />
-    <ClCompile Include="ViewImpl.cpp" />
     <ClCompile Include="HeroPlayer.cpp" />
-    <ClCompile Include="HUD.cpp" />
-    <ClCompile Include="Items.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="MapGameField.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Content.h" />
-    <ClInclude Include="DrawableObjectFirst.h" />
-    <ClInclude Include="Element.h" />
+    <ClInclude Include="DrawableObjectHUD.h" />
     <ClInclude Include="EnemyHero.h" />
-    <ClInclude Include="GameObject.h" />
-    <ClInclude Include="Input.h" />
+    <ClInclude Include="Control.h" />
     <ClInclude Include="InterchangeObject.h" />
     <ClInclude Include="LoadSave.h" />
     <ClInclude Include="MapCreator.h" />
     <ClInclude Include="Place.h" />
     <ClInclude Include="Run.h" />
     <ClInclude Include="SettingsStore.h" />
-    <ClInclude Include="State.h" />
-    <ClInclude Include="ViewImpl.h" />
     <ClInclude Include="HeroPlayer.h" />
-    <ClInclude Include="HUD.h" />
-    <ClInclude Include="Items.h" />
     <ClInclude Include="Main.h" />
     <ClInclude Include="MapGameField.h" />
+    <ClInclude Include="State.h" />
     <ClInclude Include="View.h" />
   </ItemGroup>
   <ItemGroup>

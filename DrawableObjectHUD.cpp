@@ -1,6 +1,7 @@
-#include "DrawableObjectFirst.h"
+#include "DrawableObjectHUD.h"
 #include <windows.h>
 #include <iostream>
+#include "State.h"
 
 unsigned char sprite_h[9][9] = { { 32, 32, 32, 32, 32, 32, 32, 32, 10 },
 { 32, 32 ,32, 32, 32, 32, 32, 32, 10 },
@@ -52,7 +53,7 @@ unsigned char sprite_t3[9][9] = { { 32, 32, 32, 32, 32, 32, 32, 32, 10 },
 { 32, 196 ,196, 196, 196, 196, 196, 32, 10 },
 { 32, 32, 32, 32, 32, 32, 32, 32, 10 } };
 
-void DrawableObjectFirst::DrawIcon_(unsigned char(&array)[9][9], short ofs_x, short ofs_y)
+void DrawableObjectHUD::DrawIcon_(unsigned char(&array)[9][9], short ofs_x, short ofs_y)
 {
 	using namespace std;
 	COORD coord;
@@ -75,12 +76,12 @@ void DrawableObjectFirst::DrawIcon_(unsigned char(&array)[9][9], short ofs_x, sh
 	}
 }
 
-void DrawableObjectFirst::DrawTextInfo_(std::string msg)
+void DrawableObjectHUD::DrawTextInfo_(std::string msg, int text)
 {
-	std::cout << msg;
+	std::cout << msg << "  " << text;
 }
 
-void DrawableObjectFirst::Clear_console() {
+void DrawableObjectHUD::Clear_console() {
 	COORD topLeft = { 0, 0 };
 	HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE);
 	CONSOLE_SCREEN_BUFFER_INFO screen;
@@ -99,13 +100,17 @@ void DrawableObjectFirst::Clear_console() {
 
 
 
-void DrawableObjectFirst::Draw()
+void DrawableObjectHUD::Draw(State& s)
 {
-	//todo здесь получение состояние объекта и вывод на экран
-	//for tests
 	DrawIcon_(sprite_h, 10, 0);
-	DrawTextInfo_("Health: ");
+	DrawTextInfo_("Hero Health: ", s.GetStateHero().at(0) );
 	DrawIcon_(sprite_m, 10, 5);
-	DrawTextInfo_("Mana: ");
+	DrawTextInfo_("Hero Mana: ", s.GetStateHero().at(1));
 	DrawIcon_(sprite_t1, 10, 10);
+	DrawTextInfo_("Current text string:", 0);
+
+
+	DrawIcon_(sprite_h, 20, 0);
+	DrawTextInfo_("Enemy Health: ", s.GetStateEnemy().at(0));
+
 }

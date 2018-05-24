@@ -1,33 +1,25 @@
 #include "SettingsStore.h"
 
-void SettingsPlayer::Set(vector<int> pls)
+SettingsStore::SettingsStore()
 {
-	Health = pls.at(0);
-	Manna = pls.at(1);
+	Player.push_back(0);
+	Player.push_back(0);
+	Player.push_back(0);
+	Player.push_back(0);
+
+	Enemy.push_back(0);
+	Enemy.push_back(0);
+
+	map.push_back(0);
+	map.push_back(0);
 }
 
-vector<int> SettingsPlayer::Get()
+vector<int> SettingsStore::Get() const
 {
-	return { Health, Manna };
+
 }
 
-void SettingsEnemy::Set(vector<int> ens)
+void SettingsStore::Set(vector<int>)
 {
-	Health = ens.at(0);
-}
 
-vector<int> SettingsEnemy::Get()
-{
-	return { Health };
-}
-
-void SettingsGame::Set(vector<int> sg)
-{
-	currentPlaceOnMap = sg.at(0);
-	currentTextStringShow = sg.at(1);
-}
-
-vector<int> SettingsGame::Get()
-{
-	return { currentPlaceOnMap, currentTextStringShow };
 }

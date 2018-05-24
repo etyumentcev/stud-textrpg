@@ -1,4 +1,4 @@
-#include "Input.h"
+#include "Control.h"
 
 int Input::PressedKey()
 {

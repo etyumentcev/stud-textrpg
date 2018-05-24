@@ -4,10 +4,13 @@
 #include "GameObject.h"
 #include "View.h"
 #include "SettingsStore.h"
-#include "State.h"
+#include "View.h"
+#include "MapGameField.h"
 class Run
 {
 	public:
+	MapGameField& CreateMap();
+
 	void run();
 };
 #endif Run_H
