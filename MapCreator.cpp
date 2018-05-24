@@ -29,6 +29,7 @@ MapGameField& MapCreator::getMap()
 	vector<string> place5_text;
 	place5_text.push_back("Это последнее место");
 
+
 	mgf->addPlace(0, 0, "Start !", make_tuple(1,2), place0_text);
 	mgf->addPlace(1, 0, "Поляна", make_tuple( 4,2 ), place1_text);
 	mgf->addPlace(2, 1, "Лес", make_tuple( 1,3 ), place2_text);

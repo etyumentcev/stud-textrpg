@@ -6,34 +6,14 @@
 #include <cstdio>
 #include <map>
 
-class Input
+class Control
 {
 public:
-	Input() = default;
-	~Input() = default;
-	int PressedKey();
+	Control() = default;
+	~Control() = default;
+	void GetKeyCommand();
 	void PressedKeyTest();
 };
-class ICommand
-{
-public:
-	void execute();
-};
-class Input_esc : public ICommand {
-public:
-	void execute() {
-		
-	}
-};
-class Request
-{
-	std::map<int, ICommand*> commands;
-public:
-	void Handle(int id)
-	{
-		ICommand* command = commands[id];
-		command->execute();
-	}
-};
+
 
 #endif Input_H

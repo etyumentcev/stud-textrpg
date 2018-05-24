@@ -115,6 +115,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Command_esc.cpp" />
     <ClCompile Include="DrawableObjectHUD.cpp" />
     <ClCompile Include="EnemyHero.cpp" />
     <ClCompile Include="Control.cpp" />
@@ -122,6 +123,7 @@
     <ClCompile Include="LoadSave.cpp" />
     <ClCompile Include="MapCreator.cpp" />
     <ClCompile Include="Place.cpp" />
+    <ClCompile Include="RequestHundler.cpp" />
     <ClCompile Include="Run.cpp" />
     <ClCompile Include="SettingsStore.cpp" />
     <ClCompile Include="State.cpp" />
@@ -131,13 +133,16 @@
     <ClCompile Include="MapGameField.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Command_esc.h" />
     <ClInclude Include="DrawableObjectHUD.h" />
     <ClInclude Include="EnemyHero.h" />
     <ClInclude Include="Control.h" />
+    <ClInclude Include="ICommand.h" />
     <ClInclude Include="InterchangeObject.h" />
     <ClInclude Include="LoadSave.h" />
     <ClInclude Include="MapCreator.h" />
     <ClInclude Include="Place.h" />
+    <ClInclude Include="RequestHundler.h" />
     <ClInclude Include="Run.h" />
     <ClInclude Include="SettingsStore.h" />
     <ClInclude Include="HeroPlayer.h" />

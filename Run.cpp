@@ -5,6 +5,8 @@
 #include "MapGameField.h"
 #include "MapCreator.h"
 #include "DrawableObjectHUD.h"
+#include "LoadSave.h"
+#include "Control.h"
 
 
 void Run::run()
@@ -15,13 +17,15 @@ void Run::run()
 		t->Draw(*state);
 
 		auto settings = new SettingsStore();
+		auto loadSave = new LoadSave();
+		loadSave->load(*settings);
 
 		auto enemyHero = new EnemyHero(100, 100, 100);
 		auto hero = new HeroPlayer(100, 100, 100, 100);
 
 		auto intObj = new InterchangeObject(*hero, *enemyHero);
 
-
+		auto control = new Control;
 
 	}
 
