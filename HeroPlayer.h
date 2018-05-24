@@ -1,6 +1,6 @@
 ﻿#ifndef HeroPlayer_H
 #define HeroPlayer_H
-#include "GameObject.h"
+#include <vector>
 
 class HeroPlayer
 {

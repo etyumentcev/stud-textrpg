@@ -1,7 +1,6 @@
 #ifndef VIEW_H
 #define VIEW_H
-
-#include "State.h";
+#include "State.h"
 
 class View
 {
