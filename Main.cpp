@@ -2,7 +2,7 @@
 
 int main(int argc, char* argv[])
 {
-	Run run;
-	run.run();
+	auto run = new Run;
+	run->run();
 	return 0;
 }

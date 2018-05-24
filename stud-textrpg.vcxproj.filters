@@ -31,6 +31,9 @@
     <Filter Include="Header Files\InputSave">
       <UniqueIdentifier>{4f721a64-d7ef-4cbe-ba6b-f99193c95bf2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Game\Heroes">
+      <UniqueIdentifier>{e0c0c7cd-fc81-494a-ba36-e14039c64c47}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="HUD.cpp">
@@ -52,9 +55,6 @@
       <Filter>Source Files\View</Filter>
     </ClCompile>
     <ClCompile Include="EnemyHero.cpp">
-      <Filter>Source Files\Game</Filter>
-    </ClCompile>
-    <ClCompile Include="EnemyHeroNovice.cpp">
       <Filter>Source Files\Game</Filter>
     </ClCompile>
     <ClCompile Include="GameObject.cpp">
@@ -93,6 +93,9 @@
     <ClCompile Include="State.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="InterchangeObject.cpp">
+      <Filter>Source Files\Game</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Main.h">
@@ -116,16 +119,7 @@
     <ClInclude Include="ViewImpl.h">
       <Filter>Header Files\View</Filter>
     </ClInclude>
-    <ClInclude Include="EnemyHero.h">
-      <Filter>Header Files\Game</Filter>
-    </ClInclude>
-    <ClInclude Include="EnemyHeroNovice.h">
-      <Filter>Header Files\Game</Filter>
-    </ClInclude>
     <ClInclude Include="GameObject.h">
-      <Filter>Header Files\Game</Filter>
-    </ClInclude>
-    <ClInclude Include="HeroPlayer.h">
       <Filter>Header Files\Game</Filter>
     </ClInclude>
     <ClInclude Include="Items.h">
@@ -154,6 +148,15 @@
     </ClInclude>
     <ClInclude Include="State.h">
       <Filter>Header Files\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="InterchangeObject.h">
+      <Filter>Header Files\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyHero.h">
+      <Filter>Header Files\Game\Heroes</Filter>
+    </ClInclude>
+    <ClInclude Include="HeroPlayer.h">
+      <Filter>Header Files\Game\Heroes</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

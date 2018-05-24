@@ -119,9 +119,9 @@
     <ClCompile Include="DrawableObjectFirst.cpp" />
     <ClCompile Include="Element.cpp" />
     <ClCompile Include="EnemyHero.cpp" />
-    <ClCompile Include="EnemyHeroNovice.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="Input.cpp" />
+    <ClCompile Include="InterchangeObject.cpp" />
     <ClCompile Include="LoadSave.cpp" />
     <ClCompile Include="MapCreator.cpp" />
     <ClCompile Include="Place.cpp" />
@@ -141,9 +141,9 @@
     <ClInclude Include="DrawableObjectFirst.h" />
     <ClInclude Include="Element.h" />
     <ClInclude Include="EnemyHero.h" />
-    <ClInclude Include="EnemyHeroNovice.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="Input.h" />
+    <ClInclude Include="InterchangeObject.h" />
     <ClInclude Include="LoadSave.h" />
     <ClInclude Include="MapCreator.h" />
     <ClInclude Include="Place.h" />

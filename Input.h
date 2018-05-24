@@ -36,7 +36,4 @@ public:
 	}
 };
 
-
-
-
 #endif Input_H

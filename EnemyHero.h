@@ -1,5 +1,6 @@
 ﻿#ifndef EnemyHero_H
 #define EnemyHero_H
+#include <vector>
 
 class EnemyHero
 {
@@ -7,13 +8,10 @@ class EnemyHero
 	int attackDamage;
 	int magicDamage;
 public:
-	virtual ~EnemyHero() = default;
-
 	EnemyHero(int health_level, int attack_damage, int magic_damage);
-	virtual void makeAttack() = 0;
-	virtual void makeMagicAttack(int) = 0;
-
-	void loadState();
-	void saveState();
+	void setState(std::vector<int>);
+	void getState(std::vector<int>);
+	virtual ~EnemyHero() = default;
 };
+
 #endif EnemyHero_H

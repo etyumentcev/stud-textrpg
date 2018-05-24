@@ -6,7 +6,7 @@ class State
 public:
 	State();
 	void TakeDamage(int Sender);
-	void TakeMgcDamage(int Sender);
+	void TakeMgckDamage(int Sender);
 	int GetState(int Sender);
 	void SetState();
 	virtual ~State();

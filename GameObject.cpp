@@ -8,14 +8,15 @@
 
 void GameObject::GameView(View &view)
 {
-	auto vi = std::make_unique<ViewImpl>();
-	auto mock1 = std::make_unique<Content>();
-	auto mock2 = std::make_unique<HUD>();
+	auto vi = new ViewImpl;
+	auto mock1 = new Content;
+	auto mock2 = new HUD;
+
 	vi->Draw(*mock2, *mock1);
 }
 
 MapGameField& GameObject::CreateMap()
 {
-	std::unique_ptr<MapCreator> mapCreator(new MapCreator);
+	auto mapCreator = new MapCreator;
 	return mapCreator->getMap();
 }
