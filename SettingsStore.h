@@ -1,17 +1,18 @@
 #ifndef SettingsStore_H
 #define SettingsStore_H
+
 #include <vector>
-using namespace std;
+
 class SettingsStore
 {
-	vector<int> Player;
-	vector<int> Enemy;
-	vector<int> map;
+	std::vector<int> player;
+	std::vector<int> enemy;
+	std::vector<int> map;
 public:
 	SettingsStore();
 	~SettingsStore() = default;
-	vector<int> Get() const;
-	void Set(vector<int>);
+	std::vector<int> Get(int type) const;
+	void Set(int type, std::vector<int>);
 };
 
 #endif SettingsStore_H
