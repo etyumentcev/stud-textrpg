@@ -10,7 +10,7 @@ class EnemyHero
 public:
 	EnemyHero(int health_level, int attack_damage, int magic_damage);
 	void setState(std::vector<int>);
-	void getState(std::vector<int>);
+	std::vector<int> getState() const;
 	virtual ~EnemyHero() = default;
 };
 

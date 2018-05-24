@@ -15,11 +15,11 @@ void Run::run()
 		//todo interchange object
 		//todo Как вызываются методы командами?
 		//todo настройки вызывают методы классов героев противников
-		auto state = new State;
+		auto state = new State; //todo реализация
 
 
-		auto enemyHero = new EnemyHeroNovice();
-		auto hero = new HeroPlayer();
-		auto intObj = new InterchangeObject(hero, enemyHero);
+		auto enemyHero = new EnemyHeroNovice(100, 100, 100);
+		auto hero = new HeroPlayer(100, 100, 100, 100);
+		auto intObj = new InterchangeObject(*hero, *enemyHero);
 		go->GameView(*view);
 	}

@@ -1,19 +1,19 @@
 ﻿#ifndef HeroPlayer_H
 #define HeroPlayer_H
-#include <iostream>
 #include "GameObject.h"
-
 
 class HeroPlayer
 {
 	int healthLevel;
-	int manaLevel;
 	int basicAttackDamage;
 	int magicDamage;
+	int manaLevel;
 public:
+	HeroPlayer(int, int, int, int);
 	virtual ~HeroPlayer() = default;
-	HeroPlayer(int, int, int, Items, int, int, int);
+
 	void setState(std::vector<int>);
-	void getState(std::vector<int>);
+	std::vector<int> getState(std::vector<int>) const;
 };
+
 #endif HeroPlayer_H

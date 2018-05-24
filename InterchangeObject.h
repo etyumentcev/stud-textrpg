@@ -4,15 +4,17 @@
 #include "HeroPlayer.h"
 #include "EnemyHero.h"
 
-class InterchangeObject{
+class InterchangeObject {
 	HeroPlayer& hero;
 	EnemyHero& enemyhero;
 public:
-	InterchangeObject(HeroPlayer& hp, EnemyHero& ep): hero(hp), enemyhero(ep){};
+	InterchangeObject(HeroPlayer& hp, EnemyHero& ep) : hero(hp), enemyhero(ep) {};
 	void makeAttackHero();
 	void makeMagicAttackHero(int);
+
 	void makeAttackHeroEnemy();
-	void nextStep(int place);
 	void makeMagicAttackHeroEnemy(int);
+	void nextStep(int place);
+};
 
 #endif InterchangeObject_H
