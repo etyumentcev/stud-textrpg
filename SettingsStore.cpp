@@ -1,31 +1,27 @@
 #include "SettingsStore.h"
 using namespace std;
 
+std::map<std::string, std::vector<int>*> SettingsStore::load()
+{
+	return settings;
+}
+
 SettingsStore::SettingsStore()
 {
-	player.push_back(0);
-	player.push_back(0);
-	player.push_back(0);
-	player.push_back(0);
-
-	enemy.push_back(0);
-	enemy.push_back(0);
-	enemy.push_back(0);
-
-	map.push_back(0);
-	map.push_back(0);
+	// player - 4 
+	// enemy -3
+	// map (place and string position) - 2
+	settings["player"] = new vector<int>;
+	settings["enemy"] = new vector<int>;
+	settings["map"] = new vector<int>;
 }
 
-vector<int> SettingsStore::Get(int type) const
+vector<int> SettingsStore::Get(string s) const
 {
-	if (type = 0) return player;
-	if (type = 1) return enemy;
-	if (type = 2) return map;
+	return *settings.at(s);
 }
 
-void SettingsStore::Set(int type, vector<int> v)
+void SettingsStore::Set(string s, vector<int> v)
 {
-	if (type = 0) this->player = v;
-	if (type = 1) this->enemy = v;
-	if (type = 2) this->map = v;
+	this->settings[s] = &v;
 }

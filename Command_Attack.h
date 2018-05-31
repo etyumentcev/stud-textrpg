@@ -1,3 +1,6 @@
+#ifndef CommandAttack_H
+#define CommandAttack_H
+
 #include "ICommand.h"
 #include "InterchangeObject.h"
 
@@ -10,3 +13,5 @@ public:
 	Command_Attack(InterchangeObject& intobj);
 	void execute() override;
 };
+
+#endif CommandAttack_H

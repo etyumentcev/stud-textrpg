@@ -5,11 +5,11 @@
 
 class LoadSave
 {
+	SettingsStore& ss;
 public:
-	LoadSave() = default;
+	LoadSave(SettingsStore&);
 	~LoadSave() = default;
-	void save(SettingsStore&);
-	std::vector<int> load(SettingsStore&);
+	void save(SettingsStore& const ss);
 };
 
 #endif LoadSave_H

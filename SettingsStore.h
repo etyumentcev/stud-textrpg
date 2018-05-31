@@ -2,17 +2,18 @@
 #define SettingsStore_H
 
 #include <vector>
+#include <map>
 
 class SettingsStore
 {
-	std::vector<int> player;
-	std::vector<int> enemy;
-	std::vector<int> map;
+	std::map < std::string, std::vector<int>* > settings;
+
 public:
 	SettingsStore();
 	~SettingsStore() = default;
-	std::vector<int> Get(int type) const;
-	void Set(int type, std::vector<int>);
+	std::vector<int> Get(std::string) const;
+	std::map < std::string, std::vector<int>* > load();
+	void Set(std::string, std::vector<int>);
 };
 
 #endif SettingsStore_H

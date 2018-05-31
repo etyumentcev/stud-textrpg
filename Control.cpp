@@ -1,6 +1,24 @@
 #include "Control.h"
 #include "RequestHundler.h"
+#include <chrono>
+#include <thread>
 
+Control::Control(InterchangeObject& intObj, View& view)
+	: intObj(intObj), view(view){}
+void Control::ReadKey()
+{
+	int key = ReadCode();
+	RequestHundler* handler = new RequestHundler(intObj, view);
+	handler->HandleRequest(key);
+}
+int Control::ReadCode()
+{	
+	if (_kbhit()) {
+		return _getch();
+	}
+	return 0;
+
+}
 void Control::GetKeyCommand()
 {
 
@@ -19,12 +37,10 @@ void Control::GetKeyCommand()
 	75 left
 	77 right
 	*/
-
-	RequestHundler* handler = new RequestHundler();
-	while (true){
-		handler->HandleRequest(_getch());
+	while (true) {
+		std::this_thread::sleep_for(std::chrono::milliseconds(500));
+		ReadCode();
 	}
-	//todo настройки через map
 }
 
 void Control::PressedKeyTest()

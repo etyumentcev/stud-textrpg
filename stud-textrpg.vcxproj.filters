@@ -149,6 +149,21 @@
     <ClInclude Include="Command_Attack.h">
       <Filter>Header Files\Control</Filter>
     </ClInclude>
+    <ClInclude Include="Command_EnemyAttack.h">
+      <Filter>Header Files\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Command_MoveLeftPlace.h">
+      <Filter>Header Files\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Command_SaveState.h">
+      <Filter>Header Files\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Command_GetTextFromPlace.h">
+      <Filter>Header Files\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Command_MoveRightPlace.h">
+      <Filter>Header Files\Control</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />

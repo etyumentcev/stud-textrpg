@@ -1,5 +1,4 @@
 ﻿#include "MapGameField.h"
-#include <memory>
 
 using namespace std;
 

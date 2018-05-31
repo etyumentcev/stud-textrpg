@@ -12,7 +12,7 @@ class MapGameField
 	int current_place;
 	std::map < int, Place*> map;
 public:
-	void addPlace(int, int, std::string,  std::tuple<int, int>, std::vector<std::string>); //todo вынести addplace в mapcreator;
+	void addPlace(int, int, std::string,  std::tuple<int, int>, std::vector<std::string>); //todo вынести addplace, editplace в mapcreator;
 	void removePlace(int);
 	void editPlace(int, int, std::string, std::tuple<int, int>, std::vector<std::string>);
 	Place& getPlace(int);

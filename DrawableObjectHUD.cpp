@@ -2,6 +2,7 @@
 #include <windows.h>
 #include <iostream>
 #include "InterchangeObject.h"
+using namespace std;
 
 unsigned char sprite_h[9][9] = { { 32, 32, 32, 32, 32, 32, 32, 32, 10 },
 { 32, 32 ,32, 32, 32, 32, 32, 32, 10 },
@@ -76,7 +77,7 @@ void DrawableObjectHUD::DrawIcon_(unsigned char(&array)[9][9], short ofs_x, shor
 	}
 }
 
-void DrawableObjectHUD::DrawTextInfo_(std::string msg, int text)
+void DrawableObjectHUD::DrawTextInfo_(std::string msg, std::string text)
 {
 	std::cout << msg << "  " << text;
 }
@@ -103,14 +104,16 @@ void DrawableObjectHUD::Clear_console() {
 void DrawableObjectHUD::Draw(InterchangeObject& s)
 {
 	DrawIcon_(sprite_h, 10, 0);
-	DrawTextInfo_("Hero Health: ", s.GetStateHero().at(0) );
+	DrawTextInfo_("Hero Health: ", to_string(s.GetStateHero().at(0)));
 	DrawIcon_(sprite_m, 10, 5);
-	DrawTextInfo_("Hero Mana: ", s.GetStateHero().at(1));
+	DrawTextInfo_("Hero Mana: ", to_string(s.GetStateHero().at(1)));
 	DrawIcon_(sprite_t1, 10, 10);
-	DrawTextInfo_("Current text string:", 0);
-
+	DrawTextInfo_("Current text string:");
+	//todo вызов команды вывода текста
 
 	DrawIcon_(sprite_h, 20, 0);
-	DrawTextInfo_("Enemy Health: ", s.GetStateEnemy().at(0));
+	DrawTextInfo_("Enemy Health: ", to_string(s.GetStateEnemy().at(0)));
 
+	DrawTextInfo_("Enemy Health: ", to_string(s.GetStateEnemy().at(0)));
+	DrawTextInfo_("Navigation: ", "esc - exit  a - left d - right w - attack s - enemy attack up - text str");
 }

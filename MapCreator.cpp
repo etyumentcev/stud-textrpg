@@ -18,17 +18,17 @@ MapGameField& MapCreator::getMap()
 	place1_text.push_back("Вы пришли в новое место");
 
 	vector<string> place2_text;
-	place2_text.push_back("");
+	place2_text.push_back("Вы подошли к второму месту");
 
 	vector<string> place3_text;
-	place3_text.push_back("");
+	place3_text.push_back("Это четвертое место");
 
 	vector<string> place4_text;
-	place4_text.push_back("");
+	place4_text.push_back("Здесь пятое место");
 
 	vector<string> place5_text;
 	place5_text.push_back("Это последнее место");
-
+	
 
 	mgf->addPlace(0, 0, "Start !", make_tuple(1,2), place0_text);
 	mgf->addPlace(1, 0, "Поляна", make_tuple( 4,2 ), place1_text);

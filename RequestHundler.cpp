@@ -1,8 +1,10 @@
 #include "RequestHundler.h"
 #include "InterchangeObject.h"
 #include "View.h"
+using namespace std;
 
 RequestHundler::RequestHundler(InterchangeObject& intObj, View& view)
+	:intObj(intObj), view(view)
 {
 	commands[27] = new Command_esc;
 	commands[13] = new Command_Attack(intObj);
@@ -11,11 +13,14 @@ RequestHundler::RequestHundler(InterchangeObject& intObj, View& view)
 void RequestHundler::HandleRequest(int action)
 {
 	ICommand* command = commands[action];
-
-	// Draw;
-	//todo вызов отрисовки после каждой команды
 	//todo вынести AddPlace() и EditPlace() в mapcreator()
-	view->draw();
-	
-	return  command->execute();
+	view.Draw(intObj);
+	try
+	{
+		return  command->execute();
+	}
+	catch (...)
+	{
+		std::cout << "Incorrect key code";
+	}
 }

@@ -3,5 +3,6 @@
 
 void Command_esc::execute()
 {
+	//todo вызов сохранения настроек
 	std::terminate();
 }

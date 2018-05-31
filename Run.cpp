@@ -8,16 +8,12 @@
 #include "LoadSave.h"
 #include "Control.h"
 
-
 void Run::run()
 	{
 		auto gameMap = CreateMap();
-		
 
 		auto settings = new SettingsStore();
-		auto loadSave = new LoadSave();
-		loadSave->load(*settings);
-
+		auto loadSave = new LoadSave(*settings);
 
 
 		auto enemyHero = new EnemyHero(100, 100, 100);
@@ -28,9 +24,7 @@ void Run::run()
 		View* view = new DrawableObjectHUD();
 		view->Draw(*intObj);
 
-
-		auto control = new Control(*intObj);
-
+		auto control = new Control(*intObj, *view);
 	}
 
 MapGameField& Run::CreateMap()

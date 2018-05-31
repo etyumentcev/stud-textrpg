@@ -134,8 +134,13 @@
     <ClCompile Include="MapGameField.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Command_GetTextFromPlace.h" />
+    <ClInclude Include="Command_MoveRightPlace.h" />
     <ClInclude Include="Command_Attack.h" />
+    <ClInclude Include="Command_EnemyAttack.h" />
     <ClInclude Include="Command_esc.h" />
+    <ClInclude Include="Command_MoveLeftPlace.h" />
+    <ClInclude Include="Command_SaveState.h" />
     <ClInclude Include="DrawableObjectHUD.h" />
     <ClInclude Include="EnemyHero.h" />
     <ClInclude Include="Control.h" />
