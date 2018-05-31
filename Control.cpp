@@ -1,8 +1,8 @@
 #include "Control.h"
+#include "RequestHundler.h"
 
 void Control::GetKeyCommand()
 {
-	int lastKeyCode;
 
 	/*
 	27 esc
@@ -20,9 +20,11 @@ void Control::GetKeyCommand()
 	77 right
 	*/
 
-	while (true) {
-		lastKeyCode = _getch();
+	RequestHundler* handler = new RequestHundler();
+	while (true){
+		handler->HandleRequest(_getch());
 	}
+	//todo настройки через map
 }
 
 void Control::PressedKeyTest()

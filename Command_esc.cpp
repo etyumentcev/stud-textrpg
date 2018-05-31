@@ -1,7 +1,7 @@
 #include "Command_esc.h"
-#include <corecrt_terminate.h>
+#include <iostream> 
 
 void Command_esc::execute()
 {
-	terminate();
+	std::terminate();
 }

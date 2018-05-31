@@ -1,9 +1,11 @@
 #ifndef RH_H
 #define RH_H
 
+#include <map>
+
 #include "ICommand.h"
 #include "Command_esc.h"
-#include <map>
+#include "Command_Attack.h"
 
 class RequestHundler
 {

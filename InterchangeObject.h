@@ -5,16 +5,21 @@
 #include "EnemyHero.h"
 
 class InterchangeObject {
-	HeroPlayer& hero;
-	EnemyHero& enemyhero;
+	std::vector<int> heroPlayer;
+	std::vector<int> enemyPlayer;
 public:
-	InterchangeObject(HeroPlayer& hp, EnemyHero& ep) : hero(hp), enemyhero(ep) {};
+	InterchangeObject(HeroPlayer& hp, EnemyHero& ep)
+	{
+
+	};
 	void makeAttackHero();
 	void makeMagicAttackHero(int);
 
 	void makeAttackHeroEnemy();
 	void makeMagicAttackHeroEnemy(int);
-	void nextStep(int place);
+
+	std::vector<int> GetStateHero();
+	std::vector<int> GetStateEnemy();
 };
 
 #endif InterchangeObject_H

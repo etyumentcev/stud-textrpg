@@ -1,14 +1,21 @@
 #include "RequestHundler.h"
+#include "InterchangeObject.h"
+#include "View.h"
 
-RequestHundler::RequestHundler()
+RequestHundler::RequestHundler(InterchangeObject& intObj, View& view)
 {
-	commands[0] = new Command_esc;
+	commands[27] = new Command_esc;
+	commands[13] = new Command_Attack(intObj);
 }
 
 void RequestHundler::HandleRequest(int action)
 {
 	ICommand* command = commands[action];
-	return  command->execute(); // todo реализация
-	RequestHundler* handler = new RequestHundler();
-	handler->HandleRequest(2);
+
+	// Draw;
+	//todo вызов отрисовки после каждой команды
+	//todo вынести AddPlace() и EditPlace() в mapcreator()
+	view->draw();
+	
+	return  command->execute();
 }

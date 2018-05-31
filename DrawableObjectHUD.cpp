@@ -1,7 +1,7 @@
 #include "DrawableObjectHUD.h"
 #include <windows.h>
 #include <iostream>
-#include "State.h"
+#include "InterchangeObject.h"
 
 unsigned char sprite_h[9][9] = { { 32, 32, 32, 32, 32, 32, 32, 32, 10 },
 { 32, 32 ,32, 32, 32, 32, 32, 32, 10 },
@@ -100,7 +100,7 @@ void DrawableObjectHUD::Clear_console() {
 
 
 
-void DrawableObjectHUD::Draw(State& s)
+void DrawableObjectHUD::Draw(InterchangeObject& s)
 {
 	DrawIcon_(sprite_h, 10, 0);
 	DrawTextInfo_("Hero Health: ", s.GetStateHero().at(0) );

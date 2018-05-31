@@ -6,10 +6,12 @@
 #include <cstdio>
 #include <map>
 
+#include "InterchangeObject.h"
+
 class Control
 {
 public:
-	Control() = default;
+	Control(InterchangeObject& intObj); // ?
 	~Control() = default;
 	void GetKeyCommand();
 	void PressedKeyTest();
