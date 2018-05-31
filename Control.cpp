@@ -2,14 +2,24 @@
 #include "RequestHundler.h"
 #include <chrono>
 #include <thread>
+#include <iostream>
+using namespace std;
 
-Control::Control(InterchangeObject& intObj, View& view, MapGameField& mgf, LoadSave& ls)
-	: intObj(intObj), view(view), mgf(mgf), ls(ls) {}
+Control::Control(InterchangeObject& intObj, View& view, MapGameField& mgf, LoadSave& ls, SettingsStore& ss)
+	: intObj(intObj), view(view), mgf(mgf), ls(ls), ss(ss) {}
 void Control::ReadKey()
 {
 	int key = ReadCode();
-	RequestHundler* handler = new RequestHundler(intObj, view);
-	handler->HandleRequest(key);
+	RequestHundler* handler = new RequestHundler(intObj, view, mgf, ls, ss);
+	try
+	{
+		handler->HandleRequest(key);
+	}
+	catch (std::invalid_argument)
+	{
+		std::cout << "Invalid key code";
+	}
+	
 }
 int Control::ReadCode()
 {	

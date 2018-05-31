@@ -10,7 +10,7 @@ public:
 	LoadSave(SettingsStore&);
 	~LoadSave() = default;
 	std::vector<std::string> GetLinesFromFile();
-	void save(SettingsStore& const ss);
+	void save(SettingsStore& ss);
 };
 
 #endif LoadSave_H

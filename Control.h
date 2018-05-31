@@ -9,6 +9,7 @@
 #include "InterchangeObject.h"
 #include "MapGameField.h"
 #include "LoadSave.h"
+#include "SettingsStore.h"
 
 
 class Control
@@ -17,8 +18,9 @@ class Control
 	View& view;
 	MapGameField& mgf;
 	LoadSave& ls;
+	SettingsStore& ss;
 public:
-	Control(InterchangeObject& intObj, View& view, MapGameField& mgf, LoadSave& ls);
+	Control(InterchangeObject& intObj, View& view, MapGameField& mgf, LoadSave& ls, SettingsStore& ss);
 	~Control() = default;
 	void ReadKey();
 	int ReadCode();

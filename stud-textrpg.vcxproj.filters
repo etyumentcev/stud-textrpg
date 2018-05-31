@@ -96,6 +96,24 @@
     <ClCompile Include="Command_Attack.cpp">
       <Filter>Source Files\Control</Filter>
     </ClCompile>
+    <ClCompile Include="Command_EnemyAttack.cpp">
+      <Filter>Source Files\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="Command_MoveToLeftPlace.cpp">
+      <Filter>Source Files\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="Command_GetTextFromPlace.cpp">
+      <Filter>Source Files\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="Command_MoveToRightPlace.cpp">
+      <Filter>Source Files\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="Command_MAttack.cpp">
+      <Filter>Source Files\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="Command_EnemyMAttack.cpp">
+      <Filter>Source Files\Control</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Main.h">
@@ -152,16 +170,19 @@
     <ClInclude Include="Command_EnemyAttack.h">
       <Filter>Header Files\Control</Filter>
     </ClInclude>
-    <ClInclude Include="Command_MoveLeftPlace.h">
-      <Filter>Header Files\Control</Filter>
-    </ClInclude>
-    <ClInclude Include="Command_SaveState.h">
-      <Filter>Header Files\Control</Filter>
-    </ClInclude>
     <ClInclude Include="Command_GetTextFromPlace.h">
       <Filter>Header Files\Control</Filter>
     </ClInclude>
-    <ClInclude Include="Command_MoveRightPlace.h">
+    <ClInclude Include="Command_MoveToLeftPlace.h">
+      <Filter>Header Files\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Command_MoveToRightPlace.h">
+      <Filter>Header Files\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Command_MAttack.h">
+      <Filter>Header Files\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Command_EnemyMAttack.h">
       <Filter>Header Files\Control</Filter>
     </ClInclude>
   </ItemGroup>

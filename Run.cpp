@@ -23,7 +23,7 @@ void Run::run()
 		View* view = new DrawableObjectHUD();
 		view->Draw(*intObj);
 
-		auto control = new Control(*intObj, *view, gameMap, *loadSave);
+		auto control = new Control(*intObj, *view, gameMap, *loadSave, *settings);
 	}
 
 MapGameField& Run::CreateMap()

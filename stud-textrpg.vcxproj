@@ -116,7 +116,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Command_Attack.cpp" />
+    <ClCompile Include="Command_EnemyAttack.cpp" />
+    <ClCompile Include="Command_EnemyMAttack.cpp" />
     <ClCompile Include="Command_esc.cpp" />
+    <ClCompile Include="Command_GetTextFromPlace.cpp" />
+    <ClCompile Include="Command_MAttack.cpp" />
+    <ClCompile Include="Command_MoveToLeftPlace.cpp" />
+    <ClCompile Include="Command_MoveToRightPlace.cpp" />
     <ClCompile Include="DrawableObjectHUD.cpp" />
     <ClCompile Include="EnemyHero.cpp" />
     <ClCompile Include="Control.cpp" />
@@ -134,13 +140,14 @@
     <ClCompile Include="MapGameField.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Command_EnemyMAttack.h" />
     <ClInclude Include="Command_GetTextFromPlace.h" />
-    <ClInclude Include="Command_MoveRightPlace.h" />
+    <ClInclude Include="Command_MAttack.h" />
+    <ClInclude Include="Command_MoveToRightPlace.h" />
     <ClInclude Include="Command_Attack.h" />
     <ClInclude Include="Command_EnemyAttack.h" />
     <ClInclude Include="Command_esc.h" />
-    <ClInclude Include="Command_MoveLeftPlace.h" />
-    <ClInclude Include="Command_SaveState.h" />
+    <ClInclude Include="Command_MoveToLeftPlace.h" />
     <ClInclude Include="DrawableObjectHUD.h" />
     <ClInclude Include="EnemyHero.h" />
     <ClInclude Include="Control.h" />
