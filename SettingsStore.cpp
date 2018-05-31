@@ -6,6 +6,11 @@ std::map<std::string, std::vector<int>*> SettingsStore::load()
 	return settings;
 }
 
+void SettingsStore::in(const std::map<std::string, std::vector<int>*> in)
+{
+	this->settings = in;
+}
+
 SettingsStore::SettingsStore()
 {
 	// player - 4 
