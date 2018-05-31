@@ -27,6 +27,7 @@ LoadSave::LoadSave(SettingsStore& ss):
 		settings[itemKeys.at(index)] = &inputs;
 		index++;
 	}
+	ss.in(settings);
 }
 std::vector<std::string> LoadSave::GetLinesFromFile()
 {

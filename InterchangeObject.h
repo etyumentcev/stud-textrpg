@@ -3,12 +3,13 @@
 
 #include "HeroPlayer.h"
 #include "EnemyHero.h"
+#include "SettingsStore.h"
 
 class InterchangeObject {
 	std::vector<int> heroPlayer;
 	std::vector<int> enemyPlayer;
 public:
-	InterchangeObject(HeroPlayer& hp, EnemyHero& ep)
+	InterchangeObject(HeroPlayer& hp, EnemyHero& ep, SettingsStore& ss)
 	{
 
 	};

@@ -3,8 +3,8 @@
 #include <chrono>
 #include <thread>
 
-Control::Control(InterchangeObject& intObj, View& view)
-	: intObj(intObj), view(view){}
+Control::Control(InterchangeObject& intObj, View& view, MapGameField& mgf, LoadSave& ls)
+	: intObj(intObj), view(view), mgf(mgf), ls(ls) {}
 void Control::ReadKey()
 {
 	int key = ReadCode();

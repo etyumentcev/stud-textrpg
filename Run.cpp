@@ -15,16 +15,15 @@ void Run::run()
 		auto settings = new SettingsStore();
 		auto loadSave = new LoadSave(*settings);
 
-
 		auto enemyHero = new EnemyHero(100, 100, 100);
 		auto hero = new HeroPlayer(100, 100, 100, 100);
 
-		auto intObj = new InterchangeObject(*hero, *enemyHero);
+		auto intObj = new InterchangeObject(*hero, *enemyHero, *settings);
 
 		View* view = new DrawableObjectHUD();
 		view->Draw(*intObj);
 
-		auto control = new Control(*intObj, *view);
+		auto control = new Control(*intObj, *view, gameMap, *loadSave);
 	}
 
 MapGameField& Run::CreateMap()
