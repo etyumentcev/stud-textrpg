@@ -10,7 +10,7 @@ void HeroPlayer::setState(std::vector<int> v)
 	this->manaLevel = v.at(3);
 }
 
-std::vector<int> HeroPlayer::getState(std::vector<int>) const
+std::vector<int> HeroPlayer::getState() const
 {
 	return { healthLevel, basicAttackDamage, magicDamage, manaLevel };
 }

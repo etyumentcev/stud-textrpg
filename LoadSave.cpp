@@ -24,7 +24,7 @@ LoadSave::LoadSave(SettingsStore& ss):
 		std::vector<int> inputs;
 		std::copy(std::istream_iterator<int>(in), istream_iterator<int>(),
 			std::back_inserter(inputs));
-		settings[itemKeys.at(index)] = &inputs;
+		settings[itemKeys.at(index)] = inputs;
 		index++;
 	}
 	ss.in(settings);
@@ -44,7 +44,7 @@ void LoadSave::save(SettingsStore& ss)
 	ofstream fout("settings.txt");
 	for (auto el : settings)
 	{
-		for(auto i : *el.second)
+		for(auto i : el.second)
 		{
 			fout << i;
 			fout << " ";

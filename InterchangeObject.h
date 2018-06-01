@@ -6,14 +6,12 @@
 #include "SettingsStore.h"
 
 class InterchangeObject {
-	std::vector<int> heroPlayer;
-	std::vector<int> enemyPlayer;
 	HeroPlayer& hp;
 	EnemyHero& ep;
 	SettingsStore& ss;
-	//todo место на карте и настройки
 public:
 	InterchangeObject(HeroPlayer& hp, EnemyHero& ep, SettingsStore& ss);
+	~InterchangeObject();
 	void makeAttackHero();
 	void makeMagicAttackHero(int);
 

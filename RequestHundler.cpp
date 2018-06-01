@@ -28,7 +28,7 @@ void RequestHundler::HandleRequest(int action)
 	if(commands[action] != nullptr)
 	{
 		ICommand* command = commands[action];
-		view.Draw(intObj);
+		view.Draw();
 		return command->execute();
 	}
 	throw std::invalid_argument("");

@@ -20,10 +20,11 @@ void Run::run()
 
 		auto intObj = new InterchangeObject(*hero, *enemyHero, *settings);
 
-		View* view = new DrawableObjectHUD();
-		view->Draw(*intObj);
+		View* view = new DrawableObjectHUD(*intObj, gameMap);
+		view->Draw();
 
 		auto control = new Control(*intObj, *view, gameMap, *loadSave, *settings);
+		control->GetKeyCommand();
 	}
 
 MapGameField& Run::CreateMap()

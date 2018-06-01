@@ -10,6 +10,11 @@ std::tuple<int, int> Place::getnextPlaces()
 	return nextPlaces_;
 }
 
+std::string Place::GetCurrentPhrase()
+{
+	return *it;
+}
+
 std::string Place::GetNextPhrase()
 {
 	if (it != end)

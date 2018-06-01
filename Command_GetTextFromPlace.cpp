@@ -7,5 +7,5 @@ Command_GetTextFromPlace::Command_GetTextFromPlace(MapGameField& mgf)
 
 void Command_GetTextFromPlace::execute()
 {
-	mgf.getPlace(1).GetNextPhrase();
+	mgf.getPlace(mgf.getCurrentPlaceID()).GetNextPhrase();
 }

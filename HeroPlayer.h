@@ -13,7 +13,7 @@ public:
 	virtual ~HeroPlayer() = default;
 
 	void setState(std::vector<int>);
-	std::vector<int> getState(std::vector<int>) const;
+	std::vector<int> getState() const;
 };
 
 #endif HeroPlayer_H

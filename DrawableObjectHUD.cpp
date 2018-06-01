@@ -79,7 +79,7 @@ void DrawableObjectHUD::DrawIcon_(unsigned char(&array)[9][9], short ofs_x, shor
 
 void DrawableObjectHUD::DrawTextInfo_(std::string msg, std::string text)
 {
-	std::cout << msg << "  " << text;
+	std::cout << msg << "  " << text << endl;
 }
 
 void DrawableObjectHUD::Clear_console() {
@@ -100,20 +100,24 @@ void DrawableObjectHUD::Clear_console() {
 }
 
 
+DrawableObjectHUD::DrawableObjectHUD(InterchangeObject& intObj, MapGameField& mgf)
+	:intObj(intObj), mgf(mgf)
+{
+}
 
-void DrawableObjectHUD::Draw(InterchangeObject& s)
+void DrawableObjectHUD::Draw()
 {
 	DrawIcon_(sprite_h, 10, 0);
-	DrawTextInfo_("Hero Health: ", to_string(s.GetStateHero().at(0)));
+	DrawTextInfo_("Hero Health: ", to_string(intObj.GetStateHero().at(0)));
 	DrawIcon_(sprite_m, 10, 5);
-	DrawTextInfo_("Hero Mana: ", to_string(s.GetStateHero().at(1)));
+	DrawTextInfo_("Hero Mana: ", to_string(intObj.GetStateHero().at(1)));
 	DrawIcon_(sprite_t1, 10, 10);
-	DrawTextInfo_("Current text string:");
-	//todo вызов команды вывода текста
+	DrawTextInfo_("Current text string:", mgf.getPlace(mgf.getCurrentPlaceID()).GetCurrentPhrase() );
+	
 
 	DrawIcon_(sprite_h, 20, 0);
-	DrawTextInfo_("Enemy Health: ", to_string(s.GetStateEnemy().at(0)));
+	DrawTextInfo_("Enemy Health: ", to_string(intObj.GetStateEnemy().at(0)));
 
-	DrawTextInfo_("Enemy Health: ", to_string(s.GetStateEnemy().at(0)));
-	DrawTextInfo_("Navigation: ", "esc - exit  a - left d - right w - attack s - enemy attack up - text str");
+	DrawTextInfo_("Enemy Health: ", to_string(intObj.GetStateEnemy().at(0)));
+	DrawTextInfo_("Navigation: ", "esc - exit  A - left D - right ENTER - attack  BACKSPC- enemy attack UP - text str");
 }

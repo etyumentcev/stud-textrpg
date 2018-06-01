@@ -22,8 +22,6 @@ class Control
 public:
 	Control(InterchangeObject& intObj, View& view, MapGameField& mgf, LoadSave& ls, SettingsStore& ss);
 	~Control() = default;
-	void ReadKey();
-	int ReadCode();
 	void GetKeyCommand();
 	void PressedKeyTest();
 };

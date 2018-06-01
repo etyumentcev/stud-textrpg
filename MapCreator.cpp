@@ -16,18 +16,28 @@ MapGameField& MapCreator::getMap()
 
 	vector<string> place1_text;
 	place1_text.push_back("Вы пришли в новое место");
+	place1_text.push_back("второе место");
+	place1_text.push_back("Вы пришли в новое место");
 
 	vector<string> place2_text;
+	place2_text.push_back("Вы подошли к второму месту");
+	place2_text.push_back("Вы подошли к второму месту");
 	place2_text.push_back("Вы подошли к второму месту");
 
 	vector<string> place3_text;
 	place3_text.push_back("Это четвертое место");
+	place3_text.push_back("Замок");
+	place3_text.push_back("Это четвертое место");
 
 	vector<string> place4_text;
 	place4_text.push_back("Здесь пятое место");
+	place4_text.push_back("Побережье");
+	place4_text.push_back("Здесь пятое место");
 
 	vector<string> place5_text;
-	place5_text.push_back("Это последнее место");
+	place5_text.push_back("Это последнее");
+	place5_text.push_back("шестое масто");
+	place5_text.push_back("На этом игра заканчивается");
 	
 
 	mgf->addPlace(0, 0, "Start !", make_tuple(1,2), place0_text);

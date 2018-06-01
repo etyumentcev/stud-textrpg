@@ -7,6 +7,7 @@ void MapGameField::addPlace(int placeID, int typeEnemy, string nameOfPlace, tupl
 {
 	auto place = new Place(placeID, typeEnemy, nameOfPlace, strings, nextPlaces);
 	map.insert(std::make_pair(placeID, place));
+	this->place = map.at(placeID);
 }
 
 void MapGameField::removePlace(int el)
@@ -23,6 +24,11 @@ void MapGameField::editPlace(int placeID, int typeEnemy, std::string name, std::
 Place& MapGameField::getPlace(int id)
 {
 	return *map[id];
+}
+
+int MapGameField::getCurrentPlaceID()
+{
+	return current_place;
 }
 
 void MapGameField::nextPlace(int hand_side)
